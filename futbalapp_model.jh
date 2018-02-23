@@ -1,0 +1,20 @@
+entity Player {
+	playerName String,
+    nickname String,
+}
+
+entity Team {
+	teamName String,
+}
+
+entity Match {
+	teamOne Team,
+    teamTwo Team,
+    type MatchType
+}
+
+enum MatchType {
+	TOURNAMENT,
+    CLASSIC
+}
+
