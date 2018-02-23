@@ -1,0 +1,44 @@
+
+<div *ngIf="mtch">
+    <h2><span>Mtch</span> {{mtch.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Match Type</span></dt>
+        <dd>
+            <span>{{mtch.matchType}}</span>
+        </dd>
+        <dt><span>Team One</span></dt>
+        <dd>
+            <div *ngIf="mtch.teamOne">
+                <a [routerLink]="['/team-my-suffix', mtch.teamOne?.id]">{{mtch.teamOne?.id}}</a>
+            </div>
+        </dd>
+        <dt><span>Team Two</span></dt>
+        <dd>
+            <div *ngIf="mtch.teamTwo">
+                <a [routerLink]="['/team-my-suffix', mtch.teamTwo?.id]">{{mtch.teamTwo?.id}}</a>
+            </div>
+        </dd>
+        <dt><span>Round</span></dt>
+        <dd>
+            <div *ngIf="mtch.round">
+                <a [routerLink]="['/round-my-suffix', mtch.round?.id]">{{mtch.round?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'mtch-my-suffix/'+ mtch.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

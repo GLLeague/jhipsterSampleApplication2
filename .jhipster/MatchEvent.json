@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "mtch",
+            "otherEntityName": "mtch",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "player",
+            "otherEntityName": "player",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "matchEvent"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "eventType",
+            "fieldType": "EventType",
+            "fieldValues": "GOAL,ASSIST"
+        }
+    ],
+    "changelogDate": "20180223184346",
+    "entityTableName": "match_event",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

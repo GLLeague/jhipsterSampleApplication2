@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "teamOne",
+            "otherEntityName": "team",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "mtch"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "teamTwo",
+            "otherEntityName": "team",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "mtch"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "matchEvent",
+            "otherEntityName": "matchEvent",
+            "otherEntityRelationshipName": "mtch"
+        },
+        {
+            "relationshipName": "round",
+            "otherEntityName": "round",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "matchType",
+            "fieldType": "MatchType",
+            "fieldValues": "TOURNAMENT,CLASSIC"
+        }
+    ],
+    "changelogDate": "20180223184345",
+    "entityTableName": "mtch",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

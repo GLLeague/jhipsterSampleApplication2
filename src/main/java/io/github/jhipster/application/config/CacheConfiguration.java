@@ -42,6 +42,16 @@ public class CacheConfiguration {
             cm.createCache(io.github.jhipster.application.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Player.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Team.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Team.class.getName() + ".players", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Mtch.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Mtch.class.getName() + ".matchEvents", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.MatchEvent.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Round.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Round.class.getName() + ".matches", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Season.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Season.class.getName() + ".rounds", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
