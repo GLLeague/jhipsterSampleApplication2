@@ -1,0 +1,17 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "matchType",
+            "fieldType": "MtchType",
+            "fieldValues": "TOURNAMENT,CLASSIC"
+        }
+    ],
+    "changelogDate": "20180223183810",
+    "entityTableName": "mtch",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
