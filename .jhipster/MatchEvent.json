@@ -1,0 +1,17 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "eventType",
+            "fieldType": "EventType",
+            "fieldValues": "GOAL,ASSIST"
+        }
+    ],
+    "changelogDate": "20180223184233",
+    "entityTableName": "match_event",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
