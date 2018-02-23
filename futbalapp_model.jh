@@ -1,0 +1,54 @@
+entity Player {
+	playerName String,
+    nickname String,
+}
+
+entity Team {
+	teamName String,
+}
+
+entity Match {
+	teamOne Team,
+    teamTwo Team,
+    matchType MatchType
+}
+
+enum MatchType {
+	TOURNAMENT,
+    CLASSIC
+}
+
+entity MatchEvent {
+	player Player,
+    eventType EventType
+}
+
+enum EventType {
+	GOAL,
+	ASSIST    
+}
+
+entity Round {
+	order Integer,
+}
+
+entity Season {
+	name String,
+}
+
+relationship OneToMany {
+	Team to Player,
+    Season to Round,
+    Round to Match,
+    Match to MatchEvent
+}
+
+relationship OneToOne {
+	Match to Team{TeamOne},
+    Match to Team{TeamTwo},
+    MatchEvent to Player
+}
+
+
+// Set an angular suffix
+angularSuffix * with mySuffix
