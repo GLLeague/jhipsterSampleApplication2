@@ -1,0 +1,9 @@
+entity Player {
+	playerName String,
+    nickname String
+}
+
+entity Team {
+	teamName String
+}
+
