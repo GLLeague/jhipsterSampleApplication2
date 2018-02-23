@@ -1,0 +1,15 @@
+entity Player {
+	playerName String,
+    nickname String
+}
+
+entity Team {
+	teamName String
+}
+
+entity Match {
+	id Long,
+	teamOne Team,
+    teamTwo Team,
+    type String
+}
