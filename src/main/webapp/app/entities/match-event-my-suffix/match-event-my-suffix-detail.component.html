@@ -1,0 +1,38 @@
+
+<div *ngIf="matchEvent">
+    <h2><span>Match Event</span> {{matchEvent.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Event Type</span></dt>
+        <dd>
+            <span>{{matchEvent.eventType}}</span>
+        </dd>
+        <dt><span>Mtch</span></dt>
+        <dd>
+            <div *ngIf="matchEvent.mtch">
+                <a [routerLink]="['/mtch-my-suffix', matchEvent.mtch?.id]">{{matchEvent.mtch?.id}}</a>
+            </div>
+        </dd>
+        <dt><span>Player</span></dt>
+        <dd>
+            <div *ngIf="matchEvent.player">
+                <a [routerLink]="['/player-my-suffix', matchEvent.player?.id]">{{matchEvent.player?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'match-event-my-suffix/'+ matchEvent.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
